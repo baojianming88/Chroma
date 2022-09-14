@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/maskBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:foreground="@color/black_mask" />
+
+    <RadioGroup
+        android:id="@+id/cameraSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/chooseBackground"
+        android:layout_marginTop="-80dp"
+        android:checkedButton="@id/backCamera"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/frontCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前置摄像头"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            />
+
+        <RadioButton
+            android:id="@+id/backCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="后置摄像头"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/chooseBackground"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/startChroma"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-70dp"
+        android:background="@drawable/bt_press_color_selector"
+        android:text="选择背景"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/startChroma"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/bt_press_color_selector"
+        android:text="开始抠图"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/cameraSelector"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-130dp"
+        android:shadowColor="@color/gold_shader"
+        android:shadowDx="20.0"
+        android:shadowDy="10.0"
+        android:shadowRadius="3.0"
+        android:text="WELCOME TO USE CHROMA"
+        android:textColor="#B18908"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginBottom="80dp"
+        android:text="温馨提示：请选择您的背景"
+        android:textColor="@color/teal_700"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/copyRights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/note"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:text="© 2022 by Tan. All rights reserved"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+</RelativeLayout >

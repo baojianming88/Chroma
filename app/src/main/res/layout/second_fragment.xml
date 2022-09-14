@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:id="@+id/SecondFragment"
+    android:layout_centerHorizontal="true">
+
+    <SurfaceView
+        android:id="@+id/ChromaView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <SurfaceView
+        android:id="@+id/SourceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/chromaMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bt_color_selector"
+            android:text="绿幕"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/sourceMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/chromaMode"
+            android:background="@drawable/bt_color_selector"
+            android:text="实景"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/takePhotoMode"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/click_select_style"
+        android:foreground="@mipmap/take_photo_mode_foreground" />
+
+    <ImageButton
+        android:id="@+id/recMode"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/takePhotoMode"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="-70dp"
+        android:background="@drawable/click_select_style"
+        android:foreground="@mipmap/rec_mode_foreground" />
+
+    <ImageButton
+        android:id="@+id/rec_click"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/rec_select_style"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/take_photo_click"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/take_photo_foreground"
+        android:visibility="gone"/>
+
+
+    <ImageButton
+        android:id="@+id/turnCamera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/turn_camera_foreground" />
+
+    <ImageButton
+        android:id="@+id/back2home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/turnCamera"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/back_foreground" />
+
+    <ImageButton
+        android:id="@+id/beauty"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/back2home"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="-70dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/beauty_foreground" />
+
+    <ImageButton
+        android:id="@+id/filter"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/beauty"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="-70dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/filter_foreground" />
+
+    <ImageButton
+        android:id="@+id/live"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignBottom="@id/filter"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="-75dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/live_foreground" />
+
+</RelativeLayout>

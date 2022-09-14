@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+    <ImageView
+        android:id="@+id/cropPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black" />
+
+    <ImageButton
+        android:id="@+id/back2last"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/image_bt_selector"
+        android:foreground="@mipmap/choose_back_foreground" />
+
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bt_color_selector"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+
+    <Button
+        android:id="@+id/chooseBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/bt_color_selector"
+        android:gravity="center_vertical"
+        android:text="相册选取图像"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+</RelativeLayout>

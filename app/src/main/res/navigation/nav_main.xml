@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.zt.chroma_v2.activity.Fragment1st"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/first_fragment"
+        >
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"
+            app:popExitAnim="@anim/slide_left_out"
+            app:enterAnim="@anim/slide_right_in"
+            />
+        <action
+            android:id="@+id/action_FirstFragment_to_chooseBg_gallery"
+            app:destination="@+id/gallery_bg_fragment"
+            app:popExitAnim="@anim/slide_left_out"
+            app:enterAnim="@anim/slide_right_in"
+            />
+        <action
+            android:id="@+id/action_FirstFragment_to_inside_b_preview"
+            app:destination="@+id/inside_bg_preview_fragment"
+            app:popExitAnim="@anim/slide_left_out"
+            app:enterAnim="@anim/slide_right_in"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gallery_bg_fragment"
+        android:name="com.zt.chroma_v2.activity.FragmentPreviewBackground"
+        android:label="@string/choose_gallery_bg_fragment_label"
+        tools:layout="@layout/preview_bg"
+        >
+        <action
+            android:id="@+id/action_chooseBg_gallery_to_FirstFragment"
+            app:destination="@+id/FirstFragment"
+            app:popExitAnim="@anim/slide_right_out"
+            app:enterAnim="@anim/slide_left_in"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inside_bg_fragment"
+        android:name="com.zt.chroma_v2.activity.FragmentInsideBgRecycleView"
+        android:label="@string/choose_inside_bg_fragment_label"
+        tools:layout="@layout/preview_bg_inside_recycle_view"
+        >
+        <action
+            android:id="@+id/action_chooseBg_inside_to_inside_preview"
+            app:destination="@+id/inside_bg_preview_fragment"
+            app:popExitAnim="@anim/slide_right_out"
+            app:enterAnim="@anim/slide_left_in"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/inside_bg_preview_fragment"
+        android:name="com.zt.chroma_v2.activity.FragmentPreviewBackground"
+        android:label="@string/choose_inside_bg_fragment_label"
+        tools:layout="@layout/preview_bg"
+        >
+        <action
+            android:id="@+id/action_inside_bg_preview_to_firstFragment"
+            app:destination="@+id/FirstFragment"
+            app:popExitAnim="@anim/slide_right_out"
+            app:enterAnim="@anim/slide_left_in"
+            />
+        <action
+            android:id="@+id/action_inside_bg_preview_to_inside_choose"
+            app:destination="@+id/inside_bg_fragment"
+            app:popExitAnim="@anim/slide_left_out"
+            app:enterAnim="@anim/slide_right_in"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.zt.chroma_v2.activity.Fragment2nd"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/second_fragment">
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:popExitAnim="@anim/slide_right_out"
+            app:enterAnim="@anim/slide_left_in"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+</navigation>

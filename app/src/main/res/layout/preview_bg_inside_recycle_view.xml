@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <ImageButton
+            android:id="@+id/back2last"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/image_bt_selector"
+            android:foreground="@mipmap/x_foreground" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:text="请选择一张背景"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp"/>
+
+        <ImageButton
+            android:id="@+id/submit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/image_bt_selector"
+            android:foreground="@mipmap/gou_foreground"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inside_bg_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+
+</LinearLayout>
